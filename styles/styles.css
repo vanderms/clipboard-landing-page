@@ -119,45 +119,8 @@ ol {
     line-height: 150%;
   }
 }
-.hero-section .cta-container {
-  margin: 48px auto 0;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 24px;
-}
-@media screen and (min-width: 75rem) {
-  .hero-section .cta-container {
-    flex-direction: row;
-    justify-content: center;
-    gap: 16px;
-  }
-}
-.hero-section .cta-primary,
-.hero-section .cta-secondary {
-  display: grid;
-  width: min(100%, 19.4375rem);
-  place-items: center;
-  height: 3.5rem;
-  font-weight: 600;
-  font-size: 1.125rem;
-  letter-spacing: 0.5px;
-  color: var(--white);
-  border-radius: 999px;
-}
-@media screen and (min-width: 75rem) {
-  .hero-section .cta-primary,
-.hero-section .cta-secondary {
-    width: 14.1875rem;
-  }
-}
-.hero-section .cta-primary {
-  background: var(--strong-cyan);
-  box-shadow: 0px 10px 20px rgba(137, 229, 199, 0.503305), inset 0px -3px 0px rgba(0, 0, 0, 0.151333);
-}
-.hero-section .cta-secondary {
-  background: var(--light-blue);
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.0988035), inset 0px -3px 0px rgba(0, 0, 0, 0.151333);
+.hero-section .cta-component {
+  margin-top: 3rem;
 }
 
 .header-component {
@@ -198,6 +161,47 @@ ol {
   .header-component .section-subtitle {
     font-size: 1.125rem;
   }
+}
+
+.cta-component {
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+}
+@media screen and (min-width: 75rem) {
+  .cta-component {
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+  }
+}
+.cta-component .cta-primary,
+.cta-component .cta-secondary {
+  display: grid;
+  width: min(100%, 19.4375rem);
+  place-items: center;
+  height: 3.5rem;
+  font-weight: 600;
+  font-size: 1.125rem;
+  letter-spacing: 0.5px;
+  color: var(--white);
+  border-radius: 999px;
+}
+@media screen and (min-width: 75rem) {
+  .cta-component .cta-primary,
+.cta-component .cta-secondary {
+    width: 14.1875rem;
+  }
+}
+.cta-component .cta-primary {
+  background: var(--strong-cyan);
+  box-shadow: 0px 10px 20px rgba(137, 229, 199, 0.503305), inset 0px -3px 0px rgba(0, 0, 0, 0.151333);
+}
+.cta-component .cta-secondary {
+  background: var(--light-blue);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.0988035), inset 0px -3px 0px rgba(0, 0, 0, 0.151333);
 }
 
 .keep-track-section {
@@ -401,6 +405,24 @@ ol {
     gap: 16px;
     justify-content: space-between;
   }
+}
+
+.call-to-action-section {
+  margin-top: 10.625rem;
+  padding-inline: 8.5333333%;
+}
+@media screen and (min-width: 75rem) {
+  .call-to-action-section {
+    padding-inline: calc(50vw - 555px);
+  }
+}
+@media screen and (min-width: 75rem) {
+  .call-to-action-section {
+    margin-top: 9.375rem;
+  }
+}
+.call-to-action-section .cta-component {
+  margin-top: 3rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
