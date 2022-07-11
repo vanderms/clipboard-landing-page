@@ -23,7 +23,6 @@ $breakpoints: (
   }
 }
 
-
 @mixin media-only-tablet {
   @media screen and (min-width: rem(map.get($breakpoints, tablet))) and (max-width: rem(map.get($breakpoints, laptop) - 1)) {
     @content;
@@ -39,7 +38,6 @@ $breakpoints: (
   clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
 }
-
 
 @mixin container {
   padding-inline: 8.5333333%;
@@ -90,7 +88,6 @@ ol {
   --color-text-light: hsl(201, 11%, 66%);
   --white: #fff;
 }
-
 
 .hero-section {
   @include container;
@@ -197,7 +194,6 @@ ol {
   }
 }
 
-
 .header-component {
   display: flex;
   flex-direction: column;
@@ -256,13 +252,13 @@ ol {
     gap: rem(48);
 
     @include media(laptop) {
-      width: 100%;
-      margin: rem(80) 0 0;
+      width: min(100%, 1440px);
+      margin: rem(80) auto 0;
       grid-template-columns: 1fr 350px;
       gap: 56px 110px;
       align-content: center;
       align-items: center;
-      max-width: 1440px;
+
       padding-inline: 0px min(18.0555556%, 260px);
       overflow: hidden;
 
@@ -324,6 +320,31 @@ ol {
       text-align: left;
     }
   }
+}
+
+.access-anywhere-section {
+  margin-top: rem(186);
+  @include container;
 
 
+  @include media(laptop) {
+    margin-top: rem(150);
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    margin: rem(64) auto 0;
+    width: min(100%, 812px);
+    padding-bottom: min(58.4975369%, 475px);
+    background-image: url(/images/image-devices.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+
+    @include media(laptop) {
+      margin-top: rem(110);
+    }
+  }
 }

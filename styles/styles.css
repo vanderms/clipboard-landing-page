@@ -214,13 +214,12 @@ ol {
 }
 @media screen and (min-width: 75rem) {
   .keep-track-section .features-list {
-    width: 100%;
-    margin: 5rem 0 0;
+    width: min(100%, 1440px);
+    margin: 5rem auto 0;
     grid-template-columns: 1fr 350px;
     gap: 56px 110px;
     align-content: center;
     align-items: center;
-    max-width: 1440px;
     padding-inline: 0px min(18.0555556%, 260px);
     overflow: hidden;
   }
@@ -279,6 +278,37 @@ ol {
 @media screen and (min-width: 75rem) {
   .keep-track-section .card-description {
     text-align: left;
+  }
+}
+
+.access-anywhere-section {
+  margin-top: 11.625rem;
+  padding-inline: 8.5333333%;
+}
+@media screen and (min-width: 75rem) {
+  .access-anywhere-section {
+    padding-inline: calc(50vw - 555px);
+  }
+}
+@media screen and (min-width: 75rem) {
+  .access-anywhere-section {
+    margin-top: 9.375rem;
+  }
+}
+.access-anywhere-section::after {
+  content: "";
+  display: block;
+  margin: 4rem auto 0;
+  width: min(100%, 812px);
+  padding-bottom: min(58.4975369%, 475px);
+  background-image: url(/images/image-devices.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+@media screen and (min-width: 75rem) {
+  .access-anywhere-section::after {
+    margin-top: 6.875rem;
   }
 }
 
