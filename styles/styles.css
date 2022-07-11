@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+address {
+  font-style: normal;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+:root {
+  --strong-cyan: hsl(171, 66%, 44%);
+  --light-blue: hsl(233, 100%, 69%);
+  --color-text-strong: hsl(210, 10%, 33%);
+  --color-text-light: hsl(201, 11%, 66%);
+  --white: #fff;
+}
+
+.hero-section {
+  padding-inline: 8.5333333%;
+}
+@media screen and (min-width: 75rem) {
+  .hero-section {
+    padding-inline: calc(50vw - 555px);
+  }
+}
+.hero-section::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 363px;
+  top: 0;
+  left: 0;
+  background-image: url(/images/bg-header-mobile.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+@media screen and (min-width: 75rem) {
+  .hero-section::before {
+    background-image: url(/images/bg-header-desktop.png);
+  }
+}
+.hero-section .logo {
+  margin: 123px auto 0;
+  display: block;
+  width: 125px;
+}
+@media screen and (min-width: 75rem) {
+  .hero-section .logo {
+    margin-top: 128px;
+  }
+}
+.hero-section .headline {
+  margin-top: 64px;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 125%;
+  text-align: center;
+  letter-spacing: -0.521739px;
+  color: var(--color-text-strong);
+}
+@media screen and (min-width: 75rem) {
+  .hero-section .headline {
+    margin-top: 56px;
+    font-size: 2.875rem;
+    line-height: 126.0869565%;
+  }
+}
+.hero-section .subheadline {
+  margin: 16px auto 0;
+  max-width: 730px;
+  font-size: 1rem;
+  line-height: 162%;
+  text-align: center;
+  letter-spacing: 0.12px;
+  color: var(--color-text-light);
+}
+@media screen and (min-width: 75rem) {
+  .hero-section .subheadline {
+    font-size: 20px;
+    line-height: 150%;
+  }
+}
+.hero-section .cta-container {
+  margin: 48px auto 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+}
+@media screen and (min-width: 75rem) {
+  .hero-section .cta-container {
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+  }
+}
+.hero-section .cta-primary,
+.hero-section .cta-secondary {
+  display: grid;
+  width: min(100%, 19.4375rem);
+  place-items: center;
+  height: 3.5rem;
+  font-weight: 600;
+  font-size: 1.125rem;
+  letter-spacing: 0.5px;
+  color: var(--white);
+  border-radius: 999px;
+}
+@media screen and (min-width: 75rem) {
+  .hero-section .cta-primary,
+.hero-section .cta-secondary {
+    width: 14.1875rem;
+  }
+}
+.hero-section .cta-primary {
+  background: var(--strong-cyan);
+  box-shadow: 0px 10px 20px rgba(137, 229, 199, 0.503305), inset 0px -3px 0px rgba(0, 0, 0, 0.151333);
+}
+.hero-section .cta-secondary {
+  background: var(--light-blue);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.0988035), inset 0px -3px 0px rgba(0, 0, 0, 0.151333);
+}
+
+.header-component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+@media screen and (min-width: 75rem) {
+  .header-component {
+    gap: 19px;
+  }
+}
+.header-component .section-title {
+  max-width: 730px;
+  font-weight: 600;
+  font-size: 1.75rem;
+  line-height: 125%;
+  text-align: center;
+  letter-spacing: -0.456522px;
+  color: var(--color-text-strong);
+}
+@media screen and (min-width: 75rem) {
+  .header-component .section-title {
+    font-size: 2.25rem;
+  }
+}
+.header-component .section-subtitle {
+  max-width: 730px;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 162%;
+  text-align: center;
+  letter-spacing: 0.12px;
+  color: var(--color-text-light);
+}
+@media screen and (min-width: 75rem) {
+  .header-component .section-subtitle {
+    font-size: 1.125rem;
+  }
+}
+
+.keep-track-section {
+  margin-top: 160px;
+  padding-inline: 8.5333333%;
+}
+@media screen and (min-width: 75rem) {
+  .keep-track-section {
+    padding-inline: calc(50vw - 555px);
+  }
+}
+@media screen and (min-width: 75rem) {
+  .keep-track-section {
+    margin: 150px auto 0;
+    padding: 0;
+  }
+}
+.keep-track-section .features-list {
+  margin: 4.0625rem auto 0;
+  width: min(460px, 100%);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+@media screen and (min-width: 75rem) {
+  .keep-track-section .features-list {
+    width: 100%;
+    margin: 5rem 0 0;
+    grid-template-columns: 1fr 350px;
+    gap: 56px 110px;
+    align-content: center;
+    align-items: center;
+    max-width: 1440px;
+    padding-inline: 0px min(18.0555556%, 260px);
+    overflow: hidden;
+  }
+  .keep-track-section .features-list li:nth-of-type(1) {
+    margin-top: 68px;
+  }
+}
+.keep-track-section .features-list::before {
+  content: "";
+  width: 100%;
+  padding-bottom: 76.2820513%;
+  background-image: url(/images/image-computer.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media screen and (min-width: 75rem) {
+  .keep-track-section .features-list::before {
+    margin-left: -32px;
+    width: 104.4444444%;
+    padding-bottom: 79.45%;
+    grid-area: 1/1/span 5/auto;
+  }
+}
+.keep-track-section .feature-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+@media screen and (min-width: 75rem) {
+  .keep-track-section .feature-card {
+    gap: 8px;
+  }
+}
+.keep-track-section .card-title {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 125%;
+  text-align: center;
+  letter-spacing: -0.391304px;
+  color: var(--color-text-strong);
+}
+@media screen and (min-width: 75rem) {
+  .keep-track-section .card-title {
+    text-align: left;
+  }
+}
+.keep-track-section .card-description {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 162%;
+  text-align: center;
+  letter-spacing: 0.12px;
+  color: var(--color-text-light);
+}
+@media screen and (min-width: 75rem) {
+  .keep-track-section .card-description {
+    text-align: left;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
