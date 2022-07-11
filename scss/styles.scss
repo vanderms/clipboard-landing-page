@@ -348,3 +348,58 @@ ol {
     }
   }
 }
+
+.supercharge-section {
+  margin-top: rem(130);
+  @include container();
+
+  @include media(laptop){
+    margin-top: rem(161);
+  }
+
+  .card-list {
+    margin-top: rem(90);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: rem(56);
+
+    @include media(laptop){
+      margin-top: rem(72);
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+  }
+
+  .card {
+    width: min(100%, 460px);
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-title {
+    margin-top: rem(40);
+    font-weight: 600;
+    font-size: rem(24);
+    line-height: 125%;
+    text-align: center;
+    letter-spacing: -0.391304px;
+    color: var(--color-text-strong);
+  }
+
+  .card-description {
+    margin-top: rem(18);
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: 162%;
+    text-align: center;
+    letter-spacing: 0.12px;
+    color: var(--color-text-light);
+
+    @include media(laptop){
+      margin-top: rem(16);
+      line-height: 188%;
+    }
+  }
+}
