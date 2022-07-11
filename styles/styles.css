@@ -41,6 +41,16 @@ ol {
   --white: #fff;
 }
 
+.screenreader {
+  position: absolute !important;
+  left: -100vw;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
 .hero-section {
   padding-inline: 8.5333333%;
 }
@@ -368,6 +378,28 @@ ol {
   .supercharge-section .card-description {
     margin-top: 1rem;
     line-height: 188%;
+  }
+}
+
+.brands-section {
+  margin-top: 8.1875rem;
+  padding-inline: 8.5333333%;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  align-items: center;
+}
+@media screen and (min-width: 75rem) {
+  .brands-section {
+    padding-inline: calc(50vw - 555px);
+  }
+}
+@media screen and (min-width: 75rem) {
+  .brands-section {
+    margin-top: 9.375rem;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: space-between;
   }
 }
 

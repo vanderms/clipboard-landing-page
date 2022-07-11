@@ -89,6 +89,10 @@ ol {
   --white: #fff;
 }
 
+.screenreader{
+  @include screenreader-only();
+}
+
 .hero-section {
   @include container;
 
@@ -401,5 +405,21 @@ ol {
       margin-top: rem(16);
       line-height: 188%;
     }
+  }
+}
+
+.brands-section{
+  margin-top: rem(131);
+  @include container;
+  display: flex;
+  flex-direction: column;
+  gap: rem(56);
+  align-items: center;
+
+  @include media(laptop){
+    margin-top: rem(150);
+    flex-direction: row;
+    gap: 16px;
+    justify-content: space-between;
   }
 }
