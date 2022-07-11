@@ -159,8 +159,6 @@ ol {
   .cta-component {
     margin-top: rem(48);
   }
-
-
 }
 
 .header-component {
@@ -184,7 +182,6 @@ ol {
 
     @include media(laptop) {
       font-size: rem(36);
-
     }
   }
 
@@ -210,6 +207,7 @@ ol {
   flex-direction: column;
   gap: 24px;
 
+
   @include media(laptop) {
     flex-direction: row;
     justify-content: center;
@@ -219,6 +217,8 @@ ol {
   .cta-primary,
   .cta-secondary {
     display: grid;
+    position: relative;
+    overflow: hidden;
     width: min(100%, rem(311));
     place-items: center;
     height: rem(56);
@@ -227,6 +227,15 @@ ol {
     letter-spacing: 0.5px;
     color: var(--white);
     border-radius: 999px;
+
+
+    &:hover::before {
+      content: '';
+      display: block;
+      position: absolute;
+      inset: 0 0 0 0;
+      background: rgba(255, 255, 255, 0.248825);
+    }
 
     @include media(laptop) {
       width: rem(227);
@@ -431,16 +440,116 @@ ol {
   }
 }
 
-.call-to-action-section{
+.call-to-action-section {
   margin-top: rem(170);
   @include container;
 
-  @include media(laptop){
+  @include media(laptop) {
     margin-top: rem(150);
   }
 
 
-  .cta-component{
+  .cta-component {
     margin-top: rem(48);
+  }
+}
+
+.footer-section {
+  margin-top: rem(70);
+  @include container();
+  background-color: rgb(158, 171, 178, 0.1);
+  padding-top: rem(52);
+  padding-bottom: rem(52);
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+
+  @include media(laptop) {
+    margin-top: rem(150);
+    padding-top: rem(39);
+    padding-bottom: rem(39);
+    grid-template-columns: rem(55) 1fr rem(120);
+    align-items: center;
+    gap: rem(135);
+  }
+
+  .logo {
+    width: rem(55);
+    height: rem(55);
+  }
+
+  .navlink-list {
+    margin-top: rem(40);
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: rem(20);
+
+    @include media(laptop) {
+      margin-top: 0;
+      grid-template-rows: repeat(2, auto);
+      gap: rem(12) rem(60);
+      justify-items: start;
+      justify-self: start;
+      grid-auto-flow: column;
+    }
+  }
+
+  .navlink {
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: 167%;
+    text-align: center;
+    letter-spacing: 0.135px;
+    color: var(--color-text-strong);
+
+    @include media(laptop) {
+      text-align: left;
+    }
+  }
+
+  .social-media-links {
+    margin-top: rem(48);
+    width: rem(160);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include media(laptop) {
+      margin-top: 0;
+      width: rem(120);
+    }
+  }
+
+  .social-link {
+    width: rem(24);
+    height: rem(24);
+    display: inline-block;
+    background-color: var(--color-text-strong);
+    mask-position: center;
+    -webkit-mask-position: center;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-size: contain;
+    -webkit-mask-size: contain;
+
+    &:hover {
+      background-color: var(--strong-cyan);
+    }
+
+    &[aria-label='facebook'] {
+      mask-image: url(/images/icon-facebook.svg);
+      -webkit-mask-image: url(/images/icon-facebook.svg);
+    }
+
+    &[aria-label='twitter'] {
+      mask-image: url(/images/icon-twitter.svg);
+      -webkit-mask-image: url(/images/icon-twitter.svg);
+    }
+
+    &[aria-label='instagram'] {
+      mask-image: url(/images/icon-instagram.svg);
+      -webkit-mask-image: url(/images/icon-instagram.svg);
+    }
   }
 }
